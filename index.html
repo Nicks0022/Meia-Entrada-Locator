@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudante Maps - Código Responsivo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <header>
+            <h1>Estudante Maps</h1>
+            <p>Locais reais e rotas num raio de 10 km.</p>
+        </header>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="input-localizacao" placeholder="Endereço ou use o GPS...">
+                <button class="btn-geo" onclick="obterLocalizacaoExata()" title="Usar localização atual">
+                    <i class="ph ph-target"></i>
+                </button>
+                <button class="btn-search" onclick="iniciarBusca()">Procurar</button>
+            </div>
+        </div>
+        <div class="lista-container" id="lista-locais">
+            <p class="feedback-msg">Pesquise pelo seu endereço ou clique no ícone de GPS para mapear os pontos de
+                benefício ao seu redor.</p>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
